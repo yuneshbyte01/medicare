@@ -21,15 +21,6 @@ public class UserController {
 
     private final UserService userService;
 
-    // POST /api/users/register
-    @PostMapping("/register")
-    public ResponseEntity<UserResponseDto> registerUser(@Valid @RequestBody UserRequestDto dto) {
-        User user = UserMapper.toEntity(dto);
-        user.setCreatedAt(LocalDateTime.now());
-        User registered = userService.registerUser(user);
-        return ResponseEntity.ok(UserMapper.toDto(registered));
-    }
-
     // GET /api/users
     @GetMapping
     public ResponseEntity<List<UserResponseDto>> getAllUsers() {
