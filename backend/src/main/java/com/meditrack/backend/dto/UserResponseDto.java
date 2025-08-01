@@ -1,12 +1,16 @@
 package com.meditrack.backend.dto;
 
 import com.meditrack.backend.model.Role;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class UserResponseDto {
 
     private Long id;
