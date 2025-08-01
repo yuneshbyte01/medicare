@@ -1,0 +1,100 @@
+/* Basic Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+}
+
+/* Centered container for login/register */
+.login-container,
+.register-container {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 30px 40px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 24px;
+    color: #333;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+label {
+    text-align: left;
+    font-weight: 600;
+    color: #555;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"],
+input[type="date"],
+select {
+    padding: 10px 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* Submit Button */
+button {
+    padding: 12px;
+    background-color: #4a90e2;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+button:hover {
+    background-color: #357ABD;
+}
+
+/* Error and Success messages */
+#errorMsg {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #d9534f; /* Bootstrap red */
+}
+
+#successMsg {
+    margin-top: 10px;
+    font-weight: 600;
+    color: #28a745; /* Bootstrap green */
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-container,
+    .register-container {
+        margin: 40px 20px;
+        padding: 20px 25px;
+    }
+}
